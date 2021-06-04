@@ -120,7 +120,7 @@ const AllTransactions = () => {
 
     return (
         <Row style={{ paddingTop: "5vh" }} justify="center">
-            <Col span={22}>
+            <Col xs={24} md={22}>
                 <Card>
                     <Space style={{ marginBottom: "15px", display:"flex", justifyContent:"space-between" }}>
                         <TransactionTableFilter />

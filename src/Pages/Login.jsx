@@ -42,12 +42,12 @@ const LoginPage = () => {
             </Header>
             <Content id="login-page-content" style={LoginPageStyle.content}>
                 <Row style={{ minHeight: "inherit" }} justify="start" align="middle">
-                    <Col span={6}>
+                    <Col xs={2} md={6}>
                     <Lottie options={defaultOptions}
                         height={150}
                         width={150} />
                     </Col>
-                    <Col span={12}>
+                    <Col xs={24} md={12}>
                         <AppLogin />
                     </Col>
                 </Row>
