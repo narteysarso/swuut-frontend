@@ -4,7 +4,8 @@ import Lottie from 'react-lottie';
 import AppFooter from "../components/Footer";
 import AppLogin from '../components/login/app-login-card';
 import lockAnimation from "../lottie-animation/red-lock-animation.json";
-
+import { setLogin} from '../core/loginSubscription';
+import { useEffect } from 'react';
 const { Content } = Layout;
 const defaultOptions = {
     loop: false,
@@ -16,6 +17,11 @@ const defaultOptions = {
 };
 
 const LoginPage = () => {
+
+    useEffect(()=>{
+        setLogin(false)
+    })
+    
     return (
         <Layout>
             <Header style={{background: "transparent"}}>

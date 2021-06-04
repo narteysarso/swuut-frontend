@@ -1,6 +1,7 @@
 import { Form, Input, Button, Checkbox, Alert, Divider } from 'antd';
 import { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import { setLogin } from '../../core/loginSubscription';
 const layout = {
   labelCol: {
     span: 8,
@@ -17,7 +18,7 @@ const tailLayout = {
 };
 
 const AppLoginForm = () => {
-  const [login, setLogin] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [loginError, setLoginError] = useState("");
   const [loginLoader, setLoginLoader] = useState(false);
 
@@ -25,8 +26,9 @@ const AppLoginForm = () => {
     setLoginLoader(true)
     setTimeout(() => {
       const shouldLogin = values.email === "admin@mail.com" && values.password === "eb2X3da6";
-      shouldLogin ? setLogin(shouldLogin) :  setLoginError("Incorrect email and password combination");
+      setLogin(shouldLogin)
       setLoginLoader(false);
+      shouldLogin ? setIsLoggedIn(shouldLogin) :  setLoginError("Incorrect email and password combination");
 
     }, 1000)
     
@@ -39,7 +41,7 @@ const AppLoginForm = () => {
 
   return (
 
-    login ? <Redirect to="/transactions" /> : 
+    isLoggedIn ? <Redirect to="/transactions" /> : 
     <Form
       {...layout}
       name="basic"
