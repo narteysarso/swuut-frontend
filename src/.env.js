@@ -12,4 +12,12 @@ export const MERCHANT_DRAWER_KEY = "MERCHANT_DRAWER_KEY";
 
 export const CONDUCTER_DRAWER_KEY = "CONDUCTOR_DRAWER_KEY";
 
-export const REGISTER_STAFF_DRAWER_KEY = "REGISTER_STAFF_DRAWER_KEY"
+export const REGISTER_STAFF_DRAWER_KEY = "REGISTER_STAFF_DRAWER_KEY";
+
+export const API_BASE = "http://localhost:9090";
+
+export const DATE_FORMAT = 'DD/MM/YYYY';
+
+export const DEFAULT_PAGE = 0;
+
+export const DEFAULT_PAGE_SIZE = 10;

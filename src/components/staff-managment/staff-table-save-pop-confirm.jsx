@@ -1,7 +1,7 @@
 import { Button, Popconfirm } from "antd";
 import { useState } from "react";
 
-const StaffTablePopConfirm = (props) => {
+const StaffTableSavePopConfirm = (props) => {
     const [popConfirmVisibility, setPopConfirmVisibility] = useState(false)
     const [popConfirmLoading, setPopConfirmLoading] = useState(false)
 
@@ -25,7 +25,7 @@ const StaffTablePopConfirm = (props) => {
     return (
 
         <Popconfirm
-            title={<b>This action is not reversible. <br /> Do you want to continue? </b>}
+            title={<b>Do you want to save? </b>}
             visible={popConfirmVisibility}
             onConfirm={() => handleOk()}
             okText="Yes"
@@ -39,4 +39,4 @@ const StaffTablePopConfirm = (props) => {
     )
 }
 
-export default StaffTablePopConfirm;
+export default StaffTableSavePopConfirm;

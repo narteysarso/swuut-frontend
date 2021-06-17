@@ -1,7 +1,7 @@
 import AppRegisterMerchantForm from "../app-register-merchant-form"
 import { Drawer} from 'antd';
 import { useEffect, useState } from "react";
-import { get, set, subscriber } from "../../../core/adapters/drawerStorage";
+import { get, set, subscriber } from "../../../core/support/drawerStorage";
 import { MERCHANT_DRAWER_KEY } from "../../../.env";
 
 const AppRegisterMerchantDrawer = (props) => {

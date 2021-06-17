@@ -1,7 +1,7 @@
 import AppRegisterConductorForm from "../app-register-conductor-form"
 import { Drawer} from 'antd';
 import { useEffect, useState } from "react";
-import { get, set, subscriber } from "../../../core/adapters/drawerStorage";
+import { get, set, subscriber } from "../../../core/support/drawerStorage";
 import { CONDUCTER_DRAWER_KEY } from "../../../.env";
 
 const AppRegisterConductorDrawer = (props) => {

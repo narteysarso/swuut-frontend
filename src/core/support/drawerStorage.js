@@ -19,4 +19,4 @@ export const set = (key, value) => {
 
 export const get = (key, defaultValue) => (
     JSON.parse(localStorage.getItem(key) || JSON.stringify(defaultValue))
-  )
+)

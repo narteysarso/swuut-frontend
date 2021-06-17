@@ -1,4 +1,4 @@
-import exportToExcel from "../../utils/exportToExcel"
+import exportToExcel from "../../support/exportToExcel"
 
 
 export const handleDateChange = (event, callback) => {

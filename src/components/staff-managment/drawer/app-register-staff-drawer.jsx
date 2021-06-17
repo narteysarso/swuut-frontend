@@ -1,7 +1,7 @@
 import AppRegisterStaffForm from "../app-register-staff-form"
 import { Drawer} from 'antd';
 import { useEffect, useState } from "react";
-import { get, set, subscriber } from "../../../core/adapters/drawerStorage";
+import { get, set, subscriber } from "../../../core/support/drawerStorage";
 import { REGISTER_STAFF_DRAWER_KEY } from "../../../.env";
 
 const AppRegisterStaffDrawer = (props) => {

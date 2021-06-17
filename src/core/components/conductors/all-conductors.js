@@ -1,4 +1,4 @@
-import exportToExcel from "../../utils/exportToExcel";
+import exportToExcel from "../../support/exportToExcel";
 
 export const onSearch = (value, event, callback) => {
     alert(value)

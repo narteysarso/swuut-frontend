@@ -1,3 +1,4 @@
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import './App.less';
 import CardHolderPage from './Pages/CardHolder';
@@ -8,11 +9,18 @@ import MerchantPage from './Pages/Merchant';
 import StaffManagmentPage from './Pages/StaffManagment';
 import TransactionPage from './Pages/Transaction';
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+})
 
 function App() {
   return (
-    <>
-    <Router>
+    <QueryClientProvider client={queryClient}>
+      <Router>
       <Switch>
         <Route path="/login" >
           <LoginPage />
@@ -39,7 +47,9 @@ function App() {
       </Switch>
 
     </Router>
-    </>
+  
+    </QueryClientProvider>
+    
   );
 }
 

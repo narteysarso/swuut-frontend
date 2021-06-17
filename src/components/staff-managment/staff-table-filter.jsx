@@ -1,7 +1,7 @@
 import { Button, Input, Row } from "antd";
 import { useState } from "react";
 import { REGISTER_STAFF_DRAWER_KEY } from "../../.env";
-import { set } from "../../core/adapters/drawerStorage";
+import { set } from "../../core/support/drawerStorage";
 import { onSearch } from "../../core/components/staff-managment/all-staff";
 
 const { Search } = Input;
